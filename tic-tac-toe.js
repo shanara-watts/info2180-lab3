@@ -7,9 +7,15 @@ var currentPlays = [];
 
 const Wins = 
 [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
+    [0,3,6],
+    [0,1,2],
+    [0,4,8],
+    [2,5,8],
+    [0,3,6],
+    [1,4,7],
+    [3,4,5],
+    [6,7,8],
+    [2,4,6]
 ]
 
 function restartGame()
@@ -40,7 +46,7 @@ function squareStyle(e)
 }
 
 function removeHighlight(e)
-}
+{
     //Removes hover class from the square, this chages the css
     e.target.classList.remove("hover");
 }
