@@ -28,14 +28,19 @@ function restartGame()
         squares[i].innerHTML = "";
         squares[i].addEventListener('click', clickFunc, {once : true}); // Adds an onclick event listener to each square
         squares[i].id = i; // Add number ID to each of the squares to check the wins
-        squares[i].addEventListener("mousemove", squareHighlight);
+        squares[i].addEventListener("mouseover", squareStyle);
+        squares[i].addEventListener("mouseout", removeHighlight);
     }
 }
 
-function squareHighlight(e)
+function squareStyle(e)
 {
     //Adds hover class to the square, this changes the css
     e.target.classList.add("hover");
+}
+
+function removeHighlight(e)
+}
     //Removes hover class from the square, this chages the css
     e.target.classList.remove("hover");
 }
