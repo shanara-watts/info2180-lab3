@@ -18,6 +18,14 @@ const Wins =
     [2,4,6]
 ]
 
+document.addEventListener("DOMContentLoaded", function()
+{
+    restartGame();
+    var button = document.getElementsByClassName("btn");
+    console.log(button);
+    button[0].addEventListener("click",restartGame);
+})
+
 function restartGame()
 {
     array_X = [];
@@ -50,14 +58,6 @@ function removeHighlight(e)
     //Removes hover class from the square, this chages the css
     e.target.classList.remove("hover");
 }
-
-document.addEventListener("DOMContentLoaded", function()
-{
-    restartGame();
-    var button = document.getElementsByClassName("btn");
-    console.log(button);
-    button[0].addEventListener("click",restartGame);
-})
 
 function clickFunc(e)
 {
